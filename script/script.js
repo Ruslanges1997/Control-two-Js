@@ -154,7 +154,7 @@ btnZamok.addEventListener('click', function () {                // відкри�
 
 
 let redactWhite = document.querySelector(`.redact-white`);        //Зміна кольру кноки disabled
-let btnRedact = document.querySelector(`.btn-redact`);            //.setAttribute("disabled", "disabled");    // доступ до кнопки з додатковим редактуванням
+let btnRedact = document.querySelector(`.btn-redact`);            //  доступ до кнопки з додатковим редактуванням
 let levelOne = document.querySelector(`.level-one`);              // Доступ до першого болку
 let levelTwo = document.querySelector(`.level-two`);             // Доступ до другого болку
 let area = document.querySelector(`.area`);                      // Доступ до area
@@ -165,7 +165,7 @@ btnRedact.addEventListener('click', function () {               // функці�
     levelTwo.style.display = `block`
 });
 
-let btnUnlocks = document.querySelector(`.btn-unlock`);                    // 
+let btnUnlocks = document.querySelector(`.btn-unlock`);                    // Доступ до кнопки для відкриття вікна для створення списків і таблиць
 let modalOut = document.querySelector(`.modal_out`);
 btnUnlocks.addEventListener("click", function () {
     btnRedact.style.background = ``
@@ -173,7 +173,7 @@ btnUnlocks.addEventListener("click", function () {
     fonGrey();
 });
 
-btnSign.addEventListener('click', function () {
+btnSign.addEventListener('click', function () {                                    // Функція для перевірки логіна і пароля
     if (login.value == `admin` && password.value == `admin`) {
         modalSign.style.display = 'none';
         fonWhite();
@@ -195,8 +195,8 @@ cancel.addEventListener("click", function () {
     fonWhite();
 });
 
-let signOut = document.querySelector(`.sign_out`);
-signOut.addEventListener("click", function () {
+let signOut = document.querySelector(`.sign_out`);                 
+signOut.addEventListener("click", function () {                          // Функія робить неактивною кнопку для розширених можливостей редактора
     modalOut.style.display = `none`
     btnUnlocks.style.display = "none"
     btnZamok.style.display = "block"
@@ -239,7 +239,7 @@ function resetList() {
     countLiId.value = "";
 };
 
-let validUl = document.querySelector(`.valid_ul`);
+let validUl = document.querySelector(`.valid_ul`);             // Створення Ul списків
 function createList() {
     let formList = document.forms["formCreateList"];
     let countLi = formList.countLi.value;
@@ -275,7 +275,7 @@ closeOl.addEventListener(`click`, function () {
     formListOl.style.display = `none`;
 });
 
-function createListOl() {
+function createListOl() {                                             // Створення Ol списків
     let formListol = document.forms["formCreateListOl"];
     let countLiOl = formListol.countLiOl.value;
     let typeListOl = formListol.typeListOl.value;
@@ -310,7 +310,7 @@ closeTable.addEventListener('click', function () {
     formCreateTable.style.display = `none`;
 });
 
-// створення таблиці
+// Cтворення таблиці
 let validTb = document.querySelector(`.valid_tb`);
 let countTrId = document.getElementById(`countTrId`);
 let countTdID = document.getElementById(`countTdID`);
