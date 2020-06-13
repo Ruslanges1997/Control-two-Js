@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/mine.css">
+</head>
+
+<body style="background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <div class="section">
+        <div class="level-one  ">
+            <div class="head_block ">
+            
+                <label class="editor redact-white" ><button class="btn-redact" disabled> </button><img class="btn-redact_img"
+                        src="txt_ico/redact.png" alt="redact" > </label>
+
+                <div class="retreat">
+                    <label class="editor btn-bold"><input type="checkbox"><img src="txt_ico/bold.png" alt="bold">
+                    </label>
+
+                    <label class="editor btn-italic"><input type="checkbox"><img src="txt_ico/italic.png" alt="italic">
+                    </label>
+
+                    <label class="editor btn-underline"><input type="checkbox"><img src="txt_ico/underline.png"
+                            alt="underline">
+                    </label>
+
+                    <label class="editor btn-strike"><input type="checkbox"><img src="txt_ico/strike-through.png"
+                            alt="strike">
+                    </label>
+                </div>
+
+                <div class="retreat">
+                    <label class="editor btn-left"><input type="checkbox"><img src="txt_ico/left-indent.png" alt="left">
+                    </label>
+
+                    <label class="editor btn-center"><input type="checkbox"><img src="txt_ico/center.png" alt="center">
+                    </label>
+
+                    <label class="editor btn-right"><input type="checkbox"><img src="txt_ico/arrow.png" alt="arrow">
+                    </label>
+                </div>
+                <div class="retreat">
+
+                    <label class="editor btn-font"><input type="checkbox"><img src="txt_ico/font.png" alt="font">
+                    </label>
+
+                    <label class="editor btn-size"><input type="checkbox"><img src="txt_ico/font-size.png" alt="size">
+                    </label>
+
+                    <label class="editor " id="btn_color-txt"><input type="checkbox"><img src="txt_ico/palitra.png"
+                            alt="palitra">
+                    </label>
+
+                    <label class="editor btn-bg"><input type="checkbox"><img src="txt_ico/images.png" alt="images">
+                    </label>
+                </div>
+                <label class="editor btn-zamok "><input type="checkbox"><img class="mar_zamok" src="txt_ico/zamok.png"
+                        alt="zamok">
+                </label>
+
+                <label class="editor btn-unlock none"><input type="checkbox"><img src="txt_ico/unlock.png" alt="unlock">
+                </label>
+
+                <div class="modal_out ">
+                    <button class="cancel">Cancel</button>
+                    <button class="sign_out">Sign out</button>
+                </div>
+                <!--  ЗмінаFontFamely-->
+                <select class=" hiden selectFont" onclick="btnFontFamely(this); " size="6">
+                    <option>Arial</option>
+                    <option>Georgia</option>
+                    <option>Impact</option>
+                    <option>Tahoma</option>
+                    <option>Times New Roman</option>
+                    <option>Verdana</option>
+                </select>
+                <!-- Зміна Font size -->
+                <select class=" seltSize selectSize " onclick="btnSizes(this); " size="10">
+                    <option>12px</option>
+                    <option>14px</option>
+                    <option>16px</option>
+                    <option>18px</option>
+                    <option>20px</option>
+                    <option>22px</option>
+                    <option>25px</option>
+                    <option>30px</option>
+                </select>
+
+                <div id="myModal" class="modal">
+                    <div class="box_colar">
+                        <div class="text-modal">
+                            <h2>Choose</h2>
+                            <span class="close">x</span>
+                        </div>
+                        <div class="modal-content ">
+                            <div class="colorsTxt" style="background: red;"></div>
+                            <div class="colorsTxt" style="background: blue;"></div>
+                            <div class="colorsTxt" style="background: seagreen;"></div>
+                            <div class="colorsTxt" style="background: black;"></div>
+                            <div class="colorsTxt" style="background: yellow;"></div>
+                            <div class="colorsTxt" style="background: pink;"></div>
+                            <div class="colorsTxt" style="background: aqua;"></div>
+                            <div class="colorsTxt" style="background: brown;"></div>
+                            <div class="colorsTxt" style="background: coral;"></div>
+                            <div class="colorsTxt" style="background: crimson;"></div>
+                            <div class="colorsTxt" style="background: darkgreen;"></div>
+                            <div class="colorsTxt" style="background: deeppink;"></div>
+                            <div class="colorsTxt" style="background: gold;"></div>
+                            <div class="colorsTxt" style="background: indigo;"></div>
+                            <div class="colorsTxt" style="background: lime;"></div>
+                            <div class="colorsTxt" style="background: peru;"></div>
+                            <div class="colorsTxt" style="background: tomato;"></div>
+                            <div class="colorsTxt" style="background: darkseagreen;"></div>
+                            <div class="colorsTxt" style="background: darkviolet;"></div>
+                            <div class="colorsTxt" style="background: violet;"></div>
+                            <div class="colorsTxt" style="background: hotpink;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-bg">
+                    <div class="tab">
+                        <div class="text-modal-bg">
+                            <h2>Choose</h2>
+                            <span class="close-Bg">x</span>
+                        </div>
+                        <button class="tablinks" onclick="openBg(event, 'Color')">Color</button>
+                        <button class="tablinks" onclick="openBg(event, 'Image')">Image</button>
+                        <button class="tablinks" onclick="openBg(event, 'File')">File</button>
+                    </div>
+
+                    <div id="Color" class="tabcontent">
+                        <div class=" modal-content">
+                            <div class="colors-bg" style="background: red;"></div>
+                            <div class="colors-bg" style="background: blue;"></div>
+                            <div class="colors-bg" style="background: seagreen;"></div>
+                            <div class="colors-bg" style="background: black;"></div>
+                            <div class="colors-bg" style="background: yellow;"></div>
+                            <div class="colors-bg" style="background: pink;"></div>
+                            <div class="colors-bg" style="background: aqua;"></div>
+                            <div class="colors-bg" style="background: brown;"></div>
+                            <div class="colors-bg" style="background: coral;"></div>
+                            <div class="colors-bg" style="background: crimson;"></div>
+                            <div class="colors-bg" style="background: darkgreen;"></div>
+                            <div class="colors-bg" style="background: deeppink;"></div>
+                            <div class="colors-bg" style="background: gold;"></div>
+                            <div class="colors-bg" style="background: indigo;"></div>
+                            <div class="colors-bg" style="background: lime;"></div>
+                            <div class="colors-bg" style="background: peru;"></div>
+                            <div class="colors-bg" style="background: tomato;"></div>
+                            <div class="colors-bg" style="background: darkseagreen;"></div>
+                            <div class="colors-bg" style="background: darkviolet;"></div>
+                            <div class="colors-bg" style="background: violet;"></div>
+                            <div class="colors-bg" style="background: hotpink;"></div>
+                        </div>
+                    </div>
+             
+                    <div id="Image" class="tabcontent">
+                        <div class=" modal-content">
+                            <div class="images-bg" style="background: url(imgBg/img-1.jpg);"></div>
+                            <div class="images-bg" style="background: url(imgBg/img-2.jpg);"></div>
+                            <div class="images-bg" style="background: url(imgBg/img-3.jpg);"></div>
+                            <div class="images-bg" style="background: url(imgBg/img-4.jpg);"></div>
+                            <div class="images-bg" style="background: url(imgBg/img-5.jpg);"></div>
+                            <div class="images-bg" style="background: url(imgBg/img-6.jpg);"></div>
+                            <div class="images-bg" style="background: url(imgBg/img-7.jpg);"></div>
+                            <div class="images-bg" style="background: url(imgBg/img-8.jpg);"></div>
+                            <div class="images-bg" style="background: url(imgBg/img-9.jpg);"></div>
+                        </div>
+                    </div>
+
+                    <div id="File" class="tabcontent">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input " id="customFile">
+                            <label class="custom-file-label " for="customFile">Choose file</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal_sign">
+                    <h2>Sign in</h2>
+                    <div class="input-sign ">
+                        <input class="sign-log-pas login" type="text">
+                        <input class="sign-log-pas password" type="password">
+                        <p class="check">Please check your login or password </p>
+                    </div>
+                    <button class="btn-sign ">Sign in</button>
+                </div>
+
+            </div>
+            <div class="txt-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+        </div>
+
+        <div class="level-two none">
+            <div class="head_block">
+                <div class="retreat">
+                    <label class="editor btn-save"><input type="checkbox"><img src="txt_ico/save.png" alt="bold">
+                    </label>
+                    <label class="editor btn-table"><input type="checkbox"><img src="txt_ico/table.png" alt="bold">
+                    </label>
+                    <label class="editor btn-list_Ol"><input type="checkbox"><img src="txt_ico/list-one.png" alt="bold">
+                    </label>
+                    <label class="editor btn-list_Ul"><input type="checkbox"><img src="txt_ico/list-two.png" alt="bold">
+                    </label>
+                </div>
+            </div>
+            <form>
+                <textarea class="area"></textarea>
+            </form>
+                 <!-- Таблиця -->
+            <form name="formCreateTable" class="formCreateTable  none">
+                <div class="style_table">
+                    <div class="top_list">
+                        <h3 class="table_h3">Create table</h3>
+                        <span class="close_table">X</span>
+                    </div>
+                    <div class="style_tabl">
+                        <label for="countTr">
+                            <span class="mar_span-tab">Count TR:</span>
+                            <input type="text" id="countTrID " name="countTr" class="colum_style right res_Tr"
+                                placeholder="Count TR:">
+                        </label>
+                        <label for="countTd" class="margin_left_tr">
+                            <span class="mar_span-tab">Count TD:</span>
+                            <input type="text" id="countTdID " name="countTd" class="colum_style right res_Td"
+                                placeholder="Count TD:">
+                        </label>
+                    </div>
+
+                    <div class="style_tabl">
+                        <form name="widt">
+                            <label for="WidthOfTd">
+                                <span class="mar_span-tab">Width of TD:</span>
+                                <input type="text" id="WidthOfTdID" name="WidthOfTd"
+                                    class="res_widt-td  colum_style right" placeholder="Width of TD:">
+                            </label>
+                        </form>
+                        <label for="HeightOfTd">
+                            <span class="mar_span-tab">Height of TD:</span>
+                            <input type="text" id="HeightOfTd" name="HeightOfTd" class="colum_style res_height-td"
+                                placeholder="Height Of TD:">
+                        </label>
+                    </div>
+
+                    <div class="bd_border">
+                        <div class="colum_table">
+                            <span class="txt-border">Width of border:</span>
+                            <label for="WidthOfBorder">
+                                <input type="text" id="WidthOfBorder" class="input_border_bd res_withBorder-td" name="WidthOfBorder"
+                                    placeholder="Width:">
+                        </div>
+                        </label>
+
+                        <div class="style_tabl margin_st-bord">
+                            <form name="border">
+                                <div class="colum_table margin_colum_right">
+                                    <span class="txt-border">Style of border:</span>
+                                    <label for="TypeOfBorder">
+                                        <select name="typeOfBorder" id="TypeOfBorder" class="input_border_bd">
+                                            <option selected>choose style</option>
+                                            <option value="solid">solid</option>
+                                            <option value="dashed">dashed</option>
+                                            <option value="double">double</option>
+                                            <option value="dotter">dotter</option>
+                                            <option value="groove">groove</option>
+                                            <option value="ridge">ridge</option>
+                                            <option value="inset">inset</option>
+                                            <option value="outset">outset</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </form>
+                            <div class="colum_table">
+                                <span class="txt-border">Color of border:</span>
+                                <label for="ColorOfBorder:">
+                                    <select name="ColorOfBorder" id="ColorOfBorder" class="input_border_bd">
+                                        <option selected>choose color</option>
+                                        <option value="black">black</option>
+                                        <option value="red">red</option>
+                                        <option value="green">green</option>
+                                        <option value="yellow">yellow</option>
+                                        <option value="white">white</option>
+                                        <option value="gray">gray</option>
+                                        <option value="pink">pink</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="valid_tb">invalid valid</p>
+                    <div class="button_table-box">
+                        <button type="button" class="btn res_table btn-danger btn-create_table reset">Reset
+                            <button type="button" class="btn btn-success btn_table" onclick="createTable()">Create list
+
+                    </div>
+                </div>
+            </form>
+
+            <!-- Ul > li Списки -->
+
+            <form name="formCreateList" class="formListUl none">
+                <div class="top_list">
+                    <h2 class="listH2"> Create Ul</h2>
+                    <span class="close_list-ul"> X</span>
+                </div>
+                <div class="style_list">
+                    <form name="list">
+                        <label for="countLi" class="countLi">
+                            <span class="spanLi">Count li item:</span>
+                            <input type="text" id="countLi_id" name="countLi" class="input_list_margin"
+                                placeholder="Type herre">
+                        </label>
+                    </form>
+                    <label for="countLi" class="typeLi">
+                        <span>Type mark of list:</span>
+                        <select name="typeList" id="type-list_ul" class="select_list_margin">
+                            <option id="choose_ul" selected>choose Ul type mark...</option>
+                            <option value="circle">circle</option>
+                            <option value="disc">disc</option>
+                            <option value="square">square</option>
+                        </select>
+                    </label>
+                    <p class="valid_ul">invalid value</p>
+                    <div class="button_list">
+                        <button type="button" class="btn res_list-ul btn-danger btn-create_table   "
+                            onclick="resetList()">Reset
+                            <button type="button" class="btn btn-success btn-create_table   "
+                                onclick="createList()">Create list
+                    </div>
+                </div>
+            </form>
+
+            <!-- Ol > li Списки -->
+            <form name="formCreateListOl" class="formListOl none">
+                <div class="top_list">
+                    <h2 class="listH2"> Create Ol</h2>
+                    <span class="close_list-ul close_ol"> X</span>
+                </div>
+                <div class="style_list">
+                    <form name="list">
+                        <label for="countLiOl" class="countLiOl">
+                            <span class="spanLi">Count li item:</span>
+                            <input type="text" id="countLi_id-ol" name="countLiOl" class="input_list_margin"
+                                placeholder="Type herre">
+                        </label>
+                    </form>
+                    <label for="countLiOl" class="typeLi">
+                        <span>Type mark of list:</span>
+                        <select name="typeListOl" id="type-list_ol" class="select_list_margin">
+                            <option id="choose_ul" selected>choose Ol type mark...</option>
+                            <option value="lower-alpha">a</option>
+                            <option value="lower-roman">I</option>
+                            <option value="upper-alpha">A</option>
+                            <option value="upper-roman">I</option>
+                            <option value="lower-greek">α</option>
+                        </select>
+                    </label>
+                    <p class="valid_ol">invalid valid</p>
+                    <div class="button_list">
+                        <button type="button" class="btn res_list-ul btn-danger btn-create_table   "
+                            onclick="resetListOl()">Reset
+                            <button type="button" class="btn btn-success btn-create_table   "
+                                onclick="createListOl()">Create list
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

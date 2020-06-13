@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.level-one,
+.level-two {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.mar_zamok {
+    margin-left: 7px;
+    position: relative;
+}
+
+.head_block {
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.editor {
+    //Стилізація кнопочк
+    background-color: whitesmoke;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 2px; 
+    cursor: pointer;
+}
+
+.redact-white {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+//Стилізація картинок в кнопках
+img {
+    margin: auto;
+}
+// Відступ між кнопками
+.retreat {
+    display: flex;
+    margin: 0px 10px 0px 10px;
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+input[type="button"] {
+    visibility: hidden;
+    display: none;
+}
+//   стилізація FontFamely
+.hiden {
+    display: none;
+    position: absolute;
+    transform: translate(31px, 65px);
+}
+.option {
+    margin-top: 10px;
+}
+
+.none {
+    display: none;
+}
+
+.txt-block {
+    margin: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.seltSize {
+    width: 100px;
+    transform: translate(83px, 74px);
+    height: 131px;
+    padding-left: 15px;
+    display: none;
+    position: absolute;
+}
+
+.colorsTxt,
+.colors-bg,
+.images-bg {
+    width: 75px;
+    height: 70px;
+    border-radius: 10px;
+    margin: 5px auto;
+}
+
+.images-bg {
+    width: 170px;
+}
+
+.modal {
+    display: none;
+}
+
+.box_colar {
+    width: 30%;
+    height: 35%;
+    background: white;
+    top: 4%;
+    position: fixed;
+    left: 35%;
+    border-radius: 10px;
+}
+
+.modal-content {
+    display: -webkit-box;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.close,
+.close-Bg {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.text-modal,
+.text-modal-bg {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    margin: 10px;
+}
+
+h3 {
+    margin: 10px 10px;
+}
+
+.box-bg {
+    width: 30%;
+    background-color: white;
+    position: fixed;
+    top: 37px;
+    display: none; 
+    border-radius: 10px;
+}
+
+// Стилізація box кольорів  і картинок
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    & button {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+    &button:hover {
+        background-color: #ddd;
+    }
+    & button.active {
+        background-color: #ccc;
+    }
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+// style modal Вхід
+.modal_sign {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 9%;
+    left: 40%;
+    background: white;
+    display: none;
+}
+
+.input-sign {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px 0px 10px;
+}
+
+.btn-sign {
+    width: 95%;
+    height: 40px;
+    color: white;
+    background-color: #ccc;
+    margin-top: 30px;
+}
+
+.check {
+    margin-left: -120px;
+    color: red;
+    display: none;
+}
+
+.sign-log-pas {
+    margin-top: 10px;
+    height: 40px;
+}
+
+.color-red {
+    border: 1px solid red;
+}
+
+// level_two style
+
+.area {
+    width: 100%;
+    height: 600px;
+    resize: none;
+}
+// стилізація Ul>li списків
+.listH2 {
+    margin-left: 30px;
+}
+
+.style_list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.input_list_margin {
+    margin: 5px 0px 5px 47px;
+    width: 81%;
+    height: 36px;
+}
+
+.select_list_margin {
+    height: 38px;
+    margin: 5px 0px 5px 6px;
+    width: 87%;
+}
+
+.formListUl,
+.formListOl {
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 1000px;
+    display: none;
+}
+
+.countLi {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.spanLi {
+    margin-left: 50px;
+}
+
+.typeLi {
+    margin-left: 44px;
+}
+
+.btn-create_table {
+    width: 220px;
+}
+
+.button_list {
+    margin-left: 30px;
+    margin: 30px 0px 0px 50px;
+}
+
+.res_list-ul {
+    margin-right: 10px;
+}
+
+.top_list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.valid_ul,
+.valid_ol,
+.valid_tb {
+    margin-left: 50px;
+    color: red;
+    display: none;
+}
+.valid_tb {
+    margin: -10px 0px 0px 30px;
+}
+// кінеці стилізації Ul>li списків
+
+// стилізація  таблиці
+.style_table {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    margin: 100px auto;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 1000px;
+    position: absolute;
+    left: 35%;
+    top: -6%;
+}
+.colum_style {
+    width: 85%;
+    height: 30px;
+    margin: 5px 0px 0px 17px;
+}
+.createTable {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}
+
+.bd_border {
+    margin: 15px 0px;
+    display: flex;
+    margin-left: 15px;
+}
+.style_tabl {
+    display: flex;
+}
+.input_border_bd {
+    width: 110px;
+    height: 30px;
+}
+.colum_table {
+    display: flex;
+    flex-direction: column;
+}
+#WidthOfBorder {
+    width: 250px;
+}
+.table_h3,
+.close_table {
+    margin: 20px 20px;
+}
+.close_table {
+    cursor: pointer;
+}
+.mar_span-tab {
+    margin-left: 20px;
+}
+.margin_st-bord {
+    margin-left: 50px;
+}
+.margin_colum_right {
+    margin-right: 30px;
+}
+.margin_left_tr {
+    margin-left: 10px;
+}
+.res_table {
+    width: 280px;
+    margin-right: 5px;
+}
+.btn_table {
+    width: 280px;
+}
+.button_table-box {
+    margin: 15px 15px;
+}
+// Стилізація модалки для виходу
+.modal_out {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    background-color: white;
+    border-radius: 5px;
+    display: none;
+}
+
+.cancel,
+.sign_out {
+    width: 100px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+}
+
+.cancel {
+    background-color: black;
+    margin: 35px 5px 0px 22px;
+}
+
+.sign_out {
+    background-color: red;
+}
+
+.btn-redact {
+    position: absolute;
+    border: 0px;
+}
+.btn-redact_img {
+    position: relative;
+}
